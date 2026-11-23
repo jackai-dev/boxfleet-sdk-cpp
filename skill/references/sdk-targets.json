@@ -1,0 +1,412 @@
+{
+  "contract_fingerprint": "e3fd4c744ae8933c0e0bd0c21a692897795a14657e577fb82108500d39f2ac8d",
+  "sdk_targets_version": "1.1.0",
+  "targets": [
+    {
+      "identity": {
+        "coordinates": "box_fleet_hosted_control_plane_boxfleet_io@0.3.0",
+        "ecosystem": "CMake",
+        "entry": "omniwrap::Client",
+        "import": "#include \"omniwrap/client.hpp\""
+      },
+      "operations": {
+        "cancelJob": {
+          "member": "cancel_job",
+          "method": "POST",
+          "path": "/v1/jobs/{jobId}/cancel",
+          "resource": "jobs",
+          "signature": "ApiResponse cancel_job(const std::string& arg_0_job_id) const"
+        },
+        "closeHostedWorkspace": {
+          "member": "close_hosted_workspace",
+          "method": "POST",
+          "path": "/v1/workspaces/{workspaceId}/close",
+          "resource": "workspaces",
+          "signature": "ApiResponse close_hosted_workspace(const std::string& arg_0_workspace_id) const"
+        },
+        "closePersistentBox": {
+          "member": "close_persistent_box",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/close",
+          "resource": "organizations",
+          "signature": "ApiResponse close_persistent_box(const std::string& arg_0_organization_id, const std::string& arg_1_box_id) const"
+        },
+        "controlUser": {
+          "member": "control_user",
+          "method": "POST",
+          "path": "/v1/admin/users",
+          "resource": "admin",
+          "signature": "ApiResponse control_user(const std::string& body_json = \"\") const"
+        },
+        "createBillingPortal": {
+          "member": "create_billing_portal",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/billing/portal",
+          "resource": "organizations",
+          "signature": "ApiResponse create_billing_portal(const std::string& arg_0_organization_id) const"
+        },
+        "createBox": {
+          "member": "create_box",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/boxes",
+          "resource": "organizations",
+          "signature": "ApiResponse create_box(const std::string& arg_0_organization_id, const std::string& body_json = \"\") const"
+        },
+        "createCheckout": {
+          "member": "create_checkout",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/billing/checkout",
+          "resource": "organizations",
+          "signature": "ApiResponse create_checkout(const std::string& arg_0_organization_id, const std::string& body_json = \"\") const"
+        },
+        "getAccountsConfig": {
+          "member": "get_accounts_config",
+          "method": "GET",
+          "path": "/v1/accounts/config",
+          "resource": "accounts",
+          "signature": "ApiResponse get_accounts_config() const"
+        },
+        "getAdminConsole": {
+          "member": "get_admin_console",
+          "method": "GET",
+          "path": "/v1/admin/console",
+          "resource": "admin",
+          "signature": "ApiResponse get_admin_console() const"
+        },
+        "getAdminPlans": {
+          "member": "get_admin_plans",
+          "method": "GET",
+          "path": "/v1/admin/plans",
+          "resource": "admin",
+          "signature": "ApiResponse get_admin_plans() const"
+        },
+        "getAuthGate": {
+          "member": "get_auth_gate",
+          "method": "GET",
+          "path": "/v1/auth/gate",
+          "resource": "auth",
+          "signature": "ApiResponse get_auth_gate() const"
+        },
+        "getBilling": {
+          "member": "get_billing",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/billing",
+          "resource": "organizations",
+          "signature": "ApiResponse get_billing(const std::string& arg_0_organization_id) const"
+        },
+        "getBox": {
+          "member": "get_box",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/boxes/{boxId}",
+          "resource": "organizations",
+          "signature": "ApiResponse get_box(const std::string& arg_0_organization_id, const std::string& arg_1_box_id) const"
+        },
+        "getEntitlements": {
+          "member": "get_entitlements",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/entitlements",
+          "resource": "organizations",
+          "signature": "ApiResponse get_entitlements(const std::string& arg_0_organization_id) const"
+        },
+        "getFleet": {
+          "member": "get_fleet",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/fleet",
+          "resource": "organizations",
+          "signature": "ApiResponse get_fleet(const std::string& arg_0_organization_id) const"
+        },
+        "getFleetPolicy": {
+          "member": "get_fleet_policy",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/fleet/policy",
+          "resource": "organizations",
+          "signature": "ApiResponse get_fleet_policy(const std::string& arg_0_organization_id) const"
+        },
+        "getHealth": {
+          "member": "get_health",
+          "method": "GET",
+          "path": "/health",
+          "resource": "health",
+          "signature": "ApiResponse get_health() const"
+        },
+        "getHostedWorkspace": {
+          "member": "get_hosted_workspace",
+          "method": "GET",
+          "path": "/v1/workspaces/{workspaceId}",
+          "resource": "workspaces",
+          "signature": "ApiResponse get_hosted_workspace(const std::string& arg_0_workspace_id) const"
+        },
+        "getHostedWorkspaceOperation": {
+          "member": "get_hosted_workspace_operation",
+          "method": "GET",
+          "path": "/v1/workspaces/{workspaceId}/operations/{operationId}",
+          "resource": "workspaces",
+          "signature": "ApiResponse get_hosted_workspace_operation(const std::string& arg_0_workspace_id, const std::string& arg_1_operation_id) const"
+        },
+        "getHostedWorkspaceSource": {
+          "member": "get_hosted_workspace_source",
+          "method": "GET",
+          "path": "/v1/workspaces/{workspaceId}/source",
+          "resource": "workspaces",
+          "signature": "ApiResponse get_hosted_workspace_source(const std::string& arg_0_workspace_id) const"
+        },
+        "getJob": {
+          "member": "get_job",
+          "method": "GET",
+          "path": "/v1/jobs/{jobId}",
+          "resource": "jobs",
+          "signature": "ApiResponse get_job(const std::string& arg_0_job_id) const"
+        },
+        "getPersistentBox": {
+          "member": "get_persistent_box",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}",
+          "resource": "organizations",
+          "signature": "ApiResponse get_persistent_box(const std::string& arg_0_organization_id, const std::string& arg_1_box_id) const"
+        },
+        "getPersistentBoxProviderUsage": {
+          "member": "get_persistent_box_provider_usage",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/usage",
+          "resource": "organizations",
+          "signature": "ApiResponse get_persistent_box_provider_usage(const std::string& arg_0_organization_id, const std::string& arg_1_box_id, const QueryItems& query) const"
+        },
+        "getPlans": {
+          "member": "get_plans",
+          "method": "GET",
+          "path": "/v1/plans",
+          "resource": "plans",
+          "signature": "ApiResponse get_plans() const"
+        },
+        "ingestTelemetry": {
+          "member": "ingest_telemetry",
+          "method": "POST",
+          "path": "/v1/telemetry/ingest",
+          "resource": "telemetry",
+          "signature": "ApiResponse ingest_telemetry(const std::string& body_json = \"\") const"
+        },
+        "listBoxes": {
+          "member": "list_boxes",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/boxes",
+          "resource": "organizations",
+          "signature": "ApiResponse list_boxes(const std::string& arg_0_organization_id) const"
+        },
+        "listHostedWorkspaces": {
+          "member": "list_hosted_workspaces",
+          "method": "GET",
+          "path": "/v1/workspaces",
+          "resource": "workspaces",
+          "signature": "ApiResponse list_hosted_workspaces() const"
+        },
+        "listInvoices": {
+          "member": "list_invoices",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/billing/invoices",
+          "resource": "organizations",
+          "signature": "ApiResponse list_invoices(const std::string& arg_0_organization_id) const"
+        },
+        "listJobEvents": {
+          "member": "list_job_events",
+          "method": "GET",
+          "path": "/v1/jobs/{jobId}/events",
+          "resource": "jobs",
+          "signature": "ApiResponse list_job_events(const std::string& arg_0_job_id) const"
+        },
+        "listJobs": {
+          "member": "list_jobs",
+          "method": "GET",
+          "path": "/v1/jobs",
+          "resource": "jobs",
+          "signature": "ApiResponse list_jobs() const"
+        },
+        "listMembers": {
+          "member": "list_members",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/members",
+          "resource": "organizations",
+          "signature": "ApiResponse list_members(const std::string& arg_0_organization_id) const"
+        },
+        "listObservedBoxes": {
+          "member": "list_observed_boxes",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/observed-boxes",
+          "resource": "organizations",
+          "signature": "ApiResponse list_observed_boxes(const std::string& arg_0_organization_id) const"
+        },
+        "listPersistentBoxOffers": {
+          "member": "list_persistent_box_offers",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/offers",
+          "resource": "organizations",
+          "signature": "ApiResponse list_persistent_box_offers(const std::string& arg_0_organization_id) const"
+        },
+        "listPersistentBoxes": {
+          "member": "list_persistent_boxes",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes",
+          "resource": "organizations",
+          "signature": "ApiResponse list_persistent_boxes(const std::string& arg_0_organization_id, const QueryItems& query) const"
+        },
+        "listUsers": {
+          "member": "list_users",
+          "method": "GET",
+          "path": "/v1/admin/users",
+          "resource": "admin",
+          "signature": "ApiResponse list_users() const"
+        },
+        "listWaitlist": {
+          "member": "list_waitlist",
+          "method": "GET",
+          "path": "/v1/waitlist",
+          "resource": "waitlist",
+          "signature": "ApiResponse list_waitlist() const"
+        },
+        "openHostedWorkspace": {
+          "member": "open_hosted_workspace",
+          "method": "POST",
+          "path": "/v1/workspaces",
+          "resource": "workspaces",
+          "signature": "ApiResponse open_hosted_workspace(const std::string& body_json = \"\") const"
+        },
+        "provisionPersistentBox": {
+          "member": "provision_persistent_box",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes",
+          "resource": "organizations",
+          "signature": "ApiResponse provision_persistent_box(const std::string& arg_0_organization_id, const std::string& body_json = \"\") const"
+        },
+        "putFleetPolicy": {
+          "member": "put_fleet_policy",
+          "method": "PUT",
+          "path": "/v1/organizations/{organizationId}/fleet/policy",
+          "resource": "organizations",
+          "signature": "ApiResponse put_fleet_policy(const std::string& arg_0_organization_id, const std::string& body_json = \"\") const"
+        },
+        "readTelemetry": {
+          "member": "read_telemetry",
+          "method": "GET",
+          "path": "/v1/admin/telemetry",
+          "resource": "admin",
+          "signature": "ApiResponse read_telemetry() const"
+        },
+        "reconcilePersistentBox": {
+          "member": "reconcile_persistent_box",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/reconcile",
+          "resource": "organizations",
+          "signature": "ApiResponse reconcile_persistent_box(const std::string& arg_0_organization_id, const std::string& arg_1_box_id, const std::string& body_json = \"\") const"
+        },
+        "recoverHostedWorkspace": {
+          "member": "recover_hosted_workspace",
+          "method": "POST",
+          "path": "/v1/workspaces/{workspaceId}/recover",
+          "resource": "workspaces",
+          "signature": "ApiResponse recover_hosted_workspace(const std::string& arg_0_workspace_id, const std::string& body_json = \"\") const"
+        },
+        "register": {
+          "member": "register",
+          "method": "POST",
+          "path": "/v1/auth/register",
+          "resource": "auth",
+          "signature": "ApiResponse register(const std::string& body_json = \"\") const"
+        },
+        "removeMember": {
+          "member": "remove_member",
+          "method": "DELETE",
+          "path": "/v1/organizations/{organizationId}/members/{userId}",
+          "resource": "organizations",
+          "signature": "ApiResponse remove_member(const std::string& arg_0_organization_id, const std::string& arg_1_user_id) const"
+        },
+        "requestAccess": {
+          "member": "request_access",
+          "method": "POST",
+          "path": "/v1/waitlist",
+          "resource": "waitlist",
+          "signature": "ApiResponse request_access(const std::string& body_json = \"\") const"
+        },
+        "runHostedWorkspace": {
+          "member": "run_hosted_workspace",
+          "method": "POST",
+          "path": "/v1/workspaces/{workspaceId}/run",
+          "resource": "workspaces",
+          "signature": "ApiResponse run_hosted_workspace(const std::string& arg_0_workspace_id, const std::string& body_json = \"\") const"
+        },
+        "startPersistentBox": {
+          "member": "start_persistent_box",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/start",
+          "resource": "organizations",
+          "signature": "ApiResponse start_persistent_box(const std::string& arg_0_organization_id, const std::string& arg_1_box_id, const std::string& body_json = \"\") const"
+        },
+        "stopBox": {
+          "member": "stop_box",
+          "method": "DELETE",
+          "path": "/v1/organizations/{organizationId}/boxes/{boxId}",
+          "resource": "organizations",
+          "signature": "ApiResponse stop_box(const std::string& arg_0_organization_id, const std::string& arg_1_box_id) const"
+        },
+        "stopPersistentBox": {
+          "member": "stop_persistent_box",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/stop",
+          "resource": "organizations",
+          "signature": "ApiResponse stop_persistent_box(const std::string& arg_0_organization_id, const std::string& arg_1_box_id, const std::string& body_json = \"\") const"
+        },
+        "stripeWebhook": {
+          "member": "stripe_webhook",
+          "method": "POST",
+          "path": "/v1/billing/stripe/webhook",
+          "resource": "billing",
+          "signature": "ApiResponse stripe_webhook() const"
+        },
+        "submitJob": {
+          "member": "submit_job",
+          "method": "POST",
+          "path": "/v1/jobs",
+          "resource": "jobs",
+          "signature": "ApiResponse submit_job(const std::string& body_json = \"\") const"
+        },
+        "syncObservedBoxes": {
+          "member": "sync_observed_boxes",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/observed-boxes/sync",
+          "resource": "organizations",
+          "signature": "ApiResponse sync_observed_boxes(const std::string& arg_0_organization_id, const std::string& body_json = \"\") const"
+        },
+        "updateAuthGate": {
+          "member": "update_auth_gate",
+          "method": "PUT",
+          "path": "/v1/auth/gate",
+          "resource": "auth",
+          "signature": "ApiResponse update_auth_gate(const std::string& body_json = \"\") const"
+        },
+        "updatePlan": {
+          "member": "update_plan",
+          "method": "POST",
+          "path": "/v1/admin/plans",
+          "resource": "admin",
+          "signature": "ApiResponse update_plan(const std::string& body_json = \"\") const"
+        },
+        "upsertMember": {
+          "member": "upsert_member",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/members",
+          "resource": "organizations",
+          "signature": "ApiResponse upsert_member(const std::string& arg_0_organization_id, const std::string& body_json = \"\") const"
+        },
+        "verifyLicense": {
+          "member": "verify_license",
+          "method": "POST",
+          "path": "/v1/auth/verify",
+          "resource": "auth",
+          "signature": "ApiResponse verify_license(const std::string& body_json = \"\") const"
+        }
+      },
+      "package_directory": "../box-fleet-hosted-control-plane-boxfleet-io-cpp-sdk",
+      "package_manifest": "CMakeLists.txt",
+      "reference": "api.md",
+      "renderer": "cpp"
+    }
+  ]
+}
